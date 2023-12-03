@@ -6,6 +6,10 @@ namespace ExampleProject.Framework.StepDefinitions
     [Binding]
     internal class BrowserSteps
     {
-        // todo: implement
+        [When(@"I accept the alert")]
+        public void AcceptTheAlert()
+        {
+            AqualityServices.Browser.HandleAlert(AlertAction.Accept);
+        }
     }
 }
